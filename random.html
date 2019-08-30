@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dynamically Load Youtube Video Iframe embed code inside a DIV</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'><script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<style>
+	body
+	{
+		margin	: 0;
+		padding	: 0;
+		background	: #EEE;
+		color		: #333;
+		font-family: 'Open Sans', sans-serif;
+		font-size	: 12px;
+		
+	}
+	#wrapper
+	{
+		width	: 1012px;
+		margin	: 0 auto;
+		 
+	}
+	
+	.the-player
+	{
+		width	: 560px;
+		height	: 315px;
+		border	: 1px solid #333;
+	}
+	
+	.embed-code
+	{
+		width	: 301px;
+		height	: 85px;
+	}
+	
+	
+	.btn-load-video
+	{
+		border: 1px solid #AAA;
+		padding: 3px 5px;
+		text-decoration: none;
+		background: #333;
+		color: #FFF;
+	}
+	
+</style>
+<body>
+	<div id="wrapper">
+	
+		<h1>Dynamically Load Youtube Video Iframe embed code inside a DIV</h1>
+		
+		<textarea class="embed-code"><iframe width="560" height="315" src="http://www.youtube.com/embed/XSGBVzeBUbk?autoplay=1" frameborder="0" allowfullscreen></iframe></textarea> 
+		
+		<p>You can also paste any Iframe Youtube Video Code above.</p>
+		
+		<p><a href="#" class="btn-load-video">Load the video</a></p>
+		
+		<div class="the-player">
+		
+		</div>
+		
+		<p>Demo by : <a href="http://blog.pixelthemes.com/">WordPress Themes</a> </br>
+		Article Link : <a href="http://blog.pixelthemes.com/ideas/dynamically-load-youtube-video-iframe-embed-code-inside-a-div">Article on Dynamically Load Youtube Video Iframe embed code inside a DIV</a>
+	</div>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.btn-load-video').click(function() {
+			 event.preventDefault(); 
+			 $('.the-player').append($("textarea.embed-code").val());
+			 
+			});
+		});
+	</script>
+</body>
+</html>
